@@ -1,0 +1,138 @@
+*{
+  padding: 0;
+  margin:0;
+  font-family: 'Poppins',sans-serif;
+  list-style: none;
+}
+body{
+  background-color: rgb(68, 189, 229);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  height:80vh;
+}
+.container{
+  background-color: #fff;
+  padding:15px;
+  border-radius: 5px;
+  transition: .3s;
+  position: relative;
+}
+.container .error-box{
+  position: absolute;
+  top:0;
+  width:100%;
+  height:40px;
+  border-radius: 5px;
+  background-color: #fff;
+  top:-50px;
+  left:0;
+  text-align: center;
+  opacity: 0;
+}
+.container .error-box h3{
+ font-weight:500;
+}
+.error-active{
+  opacity: 1;
+}
+.container h2{
+  display: flex;
+  align-items: center;
+  font-weight:600;
+  margin-bottom: 10px;
+}
+.container h2 img{
+  width:45px;
+}
+.container .search-box input{
+  width:250px;
+  font-size: 18px;
+  border:0;
+  outline: 0;
+  border-bottom: 2px solid #828282;
+}
+.container .search-box button{
+  font-size: 18px;
+  padding:5px 20px;
+  border:0;
+  background-color: #44bde5;
+  color:#fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container ul{
+  max-height: 250px;
+  overflow:scroll;
+  margin-top: 15px;
+}
+.container ul::-webkit-scrollbar{
+  appearance: none;
+  display: none;
+}
+.container ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: #eee;
+  border-radius: 5px;
+  padding:10px;
+  cursor: pointer;
+  
+}
+
+.container ul li .todo-info{
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.container ul li .todo-info input{
+  appearance: none;
+  width:15px;
+  height:15px;
+  border-radius:4px;
+  border:2px solid #828282;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.container ul li .todo-info input::before{
+  content: '';
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.container ul li .todo-info input:checked::before{
+  background: url('tick-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+.container ul li .todo-info input:checked ~ p{
+  text-decoration: line-through;
+  color:#464646;
+}
+.container ul li .todo-info p{
+  font-size: 18px;
+  font-weight:400;
+}
+.container ul li .trash-icon{
+  background-color: #fff;
+  padding:5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.20);
+  display: flex;
+  justify-content: center;
+}
+.container ul li i{
+  font-size: 18px;
+  color:crimson;
+  cursor: pointer;
+}
+
